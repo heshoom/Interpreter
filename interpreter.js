@@ -197,4 +197,11 @@ const readline = require('readline').createInterface({
 });
 
 readline.question("Enter 1 to process hardcoded inputs or 2 to provide a file name: ", (option) => {
-    if (option === '1')
+    if (option === '1') {
+        process_hardcoded_inputs();
+    } else if (option === '2') {
+        process_file_input();
+    } else {
+        console.log("Invalid option. Please enter either 1 or 2.");
+    }
+});
